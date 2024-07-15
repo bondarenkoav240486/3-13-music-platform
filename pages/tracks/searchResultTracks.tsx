@@ -27,7 +27,7 @@ const searchResultTracks = () => {
                             <h1>Результати пошуку</h1>
                         </Grid>
                     </Box>
-                    <TrackList tracks={tracks}/>
+                    <TrackList tracks={tracks.data}/> {/* Передача масиву треків */}
                 </Card>
             </Grid>
         </MainLayout>
