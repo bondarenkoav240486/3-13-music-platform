@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState('');
     const [products, setProducts] = useState([]);
-    console.log(searchTerm)
     const router = useRouter()
     const dispatch = useDispatch();
 

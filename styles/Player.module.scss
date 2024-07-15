@@ -1,11 +1,22 @@
+// .player {
+//   height: 60px;
+//   width: 100%;
+//   position: fixed;
+//   bottom: 0;
+//   display: flex;
+//   align-items: center;
+//   padding: 0 10px;
+//   background-color: lightgray;
+// }
 
 .player {
-  height: 60px;
-  width: 100%;
   position: fixed;
   bottom: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  padding: 0 10px;
-  background-color: lightgray;
+  padding: 10px;
+  z-index: 1000;
 }

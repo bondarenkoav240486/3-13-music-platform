@@ -14,6 +14,22 @@ export interface ITrack {
     audio: string;
     comments: IComment[]
 }
+// export interface ITrack {
+//     _id: string;
+//     name: string;
+//     artist: string;
+//     audio: string; // URL аудіофайлу
+//     picture: string; // URL зображення
+//     listens: number; // Кількість прослуховувань
+//     comments: string[]; // Масив ID коментарів
+//     createdAt: Date; // Дата створення
+//     updatedAt: Date; // Дата оновлення
+// }
+export interface Tracks {
+        data: ITrack[]; // Массив треків
+        total: number; // Загальна кількість треків
+}
+
 
 export interface TrackState {
     tracks: ITrack[];
@@ -27,7 +43,13 @@ export enum TrackActionTypes {
 
 interface FetchTracksAction {
     type: TrackActionTypes.FETCH_TRACKS;
-    payload: ITrack[]
+    // payload: ITrack[]
+    payload: Tracks
+    // payload: {
+    //     data: ITrack[]; // Массив треків
+    //     total: number; // Загальна кількість треків
+    // };
+
 }
 
 interface FetchTracksErrorAction {

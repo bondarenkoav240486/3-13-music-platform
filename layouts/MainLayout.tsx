@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from "../components/Navbar";
 import {Container} from "@material-ui/core";
@@ -34,7 +35,7 @@ const MainLayout: React.FC<MainLayoutProps>
             <Container style={{margin: '90px 0'}}>
                 {children}
             </Container>
-            <Player/>
+            {/* <Player/> */}
         </>
     );
 };
