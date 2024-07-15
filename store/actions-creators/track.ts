@@ -37,7 +37,7 @@ export const fetchTracks = (count: number = 10, offset: number = 0) => {
     return async (dispatch: Dispatch<TrackAction>) => {
         try {
             // const response = await axios.get<FetchTracksResponse>(`http://localhost:5000/tracks?count=${count}&offset=${offset}`);
-            const response = await axios.get(`http://localhost:5000/tracks?count=${count}&offset=${offset}`);
+            const response = await axios.get(process.env.NEXT_PUBLIC_API_URL + `tracks?count=${count}&offset=${offset}`);
             console.log(response)
             dispatch({ type: TrackActionTypes.FETCH_TRACKS, payload: response.data });
         } catch (e) {

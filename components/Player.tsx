@@ -96,6 +96,9 @@ import TrackProgress from "./TrackProgress";
 import { useTypedSelector } from "../hooks/useTypedSelector";
 import { useActions } from "../hooks/useActions";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+
 const Player = () => {
     const { pause, volume, active, duration, currentTime } = useTypedSelector(state => state.player)
     const { pauseTrack, playTrack, setVolume, setCurrentTime, setDuration, setActiveTrack } = useActions()
@@ -125,7 +128,8 @@ const Player = () => {
 
     const setAudio = () => {
         if (active) {
-            audioRef.current.src = 'http://localhost:5000/' + active.audio;
+            // audioRef.current.src = 'http://localhost:5000/' + active.audio;
+            audioRef.current.src = process.env.NEXT_PUBLIC_API_URL + active.audio;
             audioRef.current.volume = volume / 100;
             audioRef.current.onloadedmetadata = () => {
                 setDuration(Math.ceil(audioRef.current.duration));

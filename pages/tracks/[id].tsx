@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
-import {ITrack} from "../../types/track";
+import React, { useState } from 'react';
+import { ITrack } from "../../types/track";
 import MainLayout from "../../layouts/MainLayout";
-import {Button, Grid, TextField} from "@material-ui/core";
-import {useRouter} from "next/router";
-import {GetServerSideProps} from "next";
+import { Button, Grid, TextField } from "@material-ui/core";
+import { useRouter } from "next/router";
+import { GetServerSideProps } from "next";
 import axios from "axios";
-import {useInput} from "../../hooks/useInput";
+import { useInput } from "../../hooks/useInput";
 
-const TrackPage = ({serverTrack}) => {
+const TrackPage = ({ serverTrack }) => {
     const [track, setTrack] = useState<ITrack>(serverTrack)
     const router = useRouter()
     const username = useInput('')
@@ -15,12 +15,12 @@ const TrackPage = ({serverTrack}) => {
 
     const addComment = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/tracks/comment', {
+            const response = await axios.post(process.env.NEXT_PUBLIC_API_URL + 'tracks/comment', {
                 username: username.value,
                 text: text.value,
                 trackId: track._id
             })
-            setTrack({...track, comments: [...track.comments, response.data]})
+            setTrack({ ...track, comments: [...track.comments, response.data] })
         } catch (e) {
             console.log(e)
         }
@@ -33,14 +33,14 @@ const TrackPage = ({serverTrack}) => {
         >
             <Button
                 variant={"outlined"}
-                style={{fontSize: 32}}
+                style={{ fontSize: 32 }}
                 onClick={() => router.push('/tracks')}
             >
                 К списку
             </Button>
-            <Grid container style={{margin: '20px 0'}}>
-                <img src={'http://localhost:5000/' + track.picture} width={200} height={200}/>
-                <div style={{marginLeft: 30}}>
+            <Grid container style={{ margin: '20px 0' }}>
+                <img src={'http://localhost:5000/' + track.picture} width={200} height={200} />
+                <div style={{ marginLeft: 30 }}>
                     <h1>Название трека - {track.name}</h1>
                     <h1>Исполнитель - {track.artist}</h1>
                     <h1>Прослушиваний - {track.listens}</h1>
@@ -79,7 +79,7 @@ const TrackPage = ({serverTrack}) => {
 
 export default TrackPage;
 
-export const getServerSideProps: GetServerSideProps = async ({params}) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const response = await axios.get('http://localhost:5000/tracks/' + params.id)
     return {
         props: {
