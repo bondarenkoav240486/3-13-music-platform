@@ -27,53 +27,55 @@ const TrackPage = ({ serverTrack }) => {
     }
 
     return (
-        <MainLayout
-            title={"Музыкальная площадка - " + track.name + " - " + track.artist}
-            keywords={'Музыка, артисты, ' + track.name + ", " + track.artist}
-        >
-            <Button
-                variant={"outlined"}
-                style={{ fontSize: 32 }}
-                onClick={() => router.push('/tracks')}
+        <div className='Song_Page'>
+            <MainLayout
+                title={"Музична майданчик - " + track.name + " - " + track.artist}
+                keywords={'Музика, артисти, ' + track.name + ", " + track.artist}
             >
-                К списку
-            </Button>
-            <Grid container style={{ margin: '20px 0' }}>
-                <img src={'http://localhost:5000/' + track.picture} width={200} height={200} />
-                <div style={{ marginLeft: 30 }}>
-                    <h1>Название трека - {track.name}</h1>
-                    <h1>Исполнитель - {track.artist}</h1>
-                    <h1>Прослушиваний - {track.listens}</h1>
-                </div>
-            </Grid>
-            <h1>Слова в треке</h1>
-            <p>{track.text}</p>
-            <h1>Комментарии</h1>
-            <Grid container>
-
-                <TextField
-                    label="Ваше имя"
-                    fullWidth
-                    {...username}
-                />
-                <TextField
-                    label="Комментарий"
-                    {...text}
-                    fullWidth
-                    multiline
-                    rows={4}
-                />
-                <Button onClick={addComment}>Отправить</Button>
-            </Grid>
-            <div>
-                {track.comments.map((comment, i) =>
-                    <div key={i}>
-                        <div>Автор - {comment.username}</div>
-                        <div>Комментарий - {comment.text}</div>
+                <Button
+                    variant={"outlined"}
+                    style={{ fontSize: 32 }}
+                    onClick={() => router.push('/tracks')}
+                >
+                    До списку
+                </Button>
+                <Grid container style={{ margin: '20px 0' }}>
+                    <img src={process.env.NEXT_PUBLIC_API_URL + track.picture} width={200} height={200} />
+                    <div style={{ marginLeft: 30 }}>
+                        <h1>Назва пісні - {track.name}</h1>
+                        <h1>Виконавець - {track.artist}</h1>
+                        <h1>Кількість прослуховувань - {track.listens}</h1>
                     </div>
-                )}
-            </div>
-        </MainLayout>
+                </Grid>
+                <h1>Слова у пісні</h1>
+                <p>{track.text}</p>
+                <h1>Коментарі</h1>
+                <Grid container>
+
+                    <TextField
+                        label="Ваше ім'я"
+                        fullWidth
+                        {...username}
+                    />
+                    <TextField
+                        label="Коментарій"
+                        {...text}
+                        fullWidth
+                        multiline
+                        rows={4}
+                    />
+                    <Button onClick={addComment}>Відправити</Button>
+                </Grid>
+                <div>
+                    {track.comments.map((comment, i) =>
+                        <div key={i}>
+                            <div>Автор - {comment.username}</div>
+                            <div>Коментарій - {comment.text}</div>
+                        </div>
+                    )}
+                </div>
+            </MainLayout>
+        </div>
     );
 };
 

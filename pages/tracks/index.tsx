@@ -51,9 +51,9 @@ const Index = () => {
                 <Card style={{ width: 900 }}>
                     <Box p={3}>
                         <Grid container justifyContent='space-between'>
-                            <h1>Список треков</h1>
+                            <h1>Список пісень</h1>
                             <Button onClick={() => router.push('/tracks/create')}>
-                                Загрузить
+                                Завантажити
                             </Button>
                         </Grid>
                     </Box>

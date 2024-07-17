@@ -1,0 +1,11 @@
+@media (max-width: 550px) {
+    .Search  {
+        margin-left: 0.75rem;
+        /* display: flex; */
+        /* align-items: center; */
+    }
+
+    header{
+        padding-bottom: 0.75rem !important;
+    }
+}

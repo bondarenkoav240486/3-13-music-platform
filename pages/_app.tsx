@@ -15,6 +15,10 @@ import { wrapper } from '../store';
 import Player from '../components/Player';
 import Search from '../components/Search';
 
+import '../styles/global.css';
+import '../styles/rersponsive_global.css';
+
+
 const WrappedApp: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>
     <Component {...pageProps} />

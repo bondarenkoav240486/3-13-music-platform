@@ -77,7 +77,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
     }
 
     return (
-        <Card className={styles.track} onClick={() => router.push('/tracks/' + track._id)}>
+        <Card className={`${styles.track} TrackItem`} onClick={() => router.push('/tracks/' + track._id)}>
             {/* <IconButton onClick={play}>
                 {!active
                     ? <PlayArrow />
@@ -85,7 +85,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
                 }
             </IconButton> */}
 
-            <IconButton onClick={play}>
+            <IconButton onClick={play} >
                 {active?._id === track._id && !pause
                     // {active?._id === track._id 
                     ? <Pause />
@@ -99,7 +99,8 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
             <img width={70} height={70} src={process.env.NEXT_PUBLIC_API_URL + track.picture} />
             <Grid container direction="column" style={{ width: 200, margin: '0 20px' }}>
                 <div>{track.name}</div>
-                <div style={{ fontSize: 12, color: 'gray' }}>{track.artist}</div>
+                {/* <div style={{ fontSize: 12, color: 'gray' }}>{track.artist}</div> */}
+                <div style={{ fontSize: '0.75rem'}}>{track.artist}</div>
             </Grid>
             {active && <div>02:42 / 03:22</div>}
             <IconButton

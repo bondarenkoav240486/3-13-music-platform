@@ -37,6 +37,7 @@ const Create = () => {
     }
 
     return (
+        
         <MainLayout>
             <StepWrapper activeStep={activeStep}>
                 {activeStep === 0 &&
@@ -44,17 +45,17 @@ const Create = () => {
                         <TextField
                             {...name}
                             style={{ marginTop: 10 }}
-                            label={"Название трека"}
+                            label={"Назва пісні"}
                         />
                         <TextField
                             {...artist}
                             style={{ marginTop: 10 }}
-                            label={"Имя исполнителя"}
+                            label={"Ім'я виконавця"}
                         />
                         <TextField
                             {...text}
                             style={{ marginTop: 10 }}
-                            label={"Слова к треку"}
+                            label={"Слова до пісні"}
                             multiline
                             rows={3}
                         />
@@ -62,18 +63,18 @@ const Create = () => {
                 }
                 {activeStep === 1 &&
                     <FileUpload setFile={setPicture} accept="image/*">
-                        <Button>Загрузить изображение</Button>
+                        <Button>Завантажити зображення</Button>
                     </FileUpload>
                 }
                 {activeStep === 2 &&
                     <FileUpload setFile={setAudio} accept="audio/*">
-                        <Button>Загрузить аудио</Button>
+                        <Button>Завантажити аудіо</Button>
                     </FileUpload>
                 }
             </StepWrapper>
             <Grid container justifyContent='space-between'>
                 <Button disabled={activeStep === 0} onClick={back}>Назад</Button>
-                <Button onClick={next}>Далее</Button>
+                <Button onClick={next}>Далі</Button>
             </Grid>
         </MainLayout>
     );

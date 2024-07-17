@@ -1,0 +1,123 @@
+html {
+    /* background-color: #0CA2CD !important; */
+    /* background-color: #0CA2CD3E !important; */
+    /* background-color: #0eb9e91c !important; */
+    background-color:  #0CA2CC !important;
+
+}
+
+.MuiAppBar-root {
+    background-color: #0B6D98 !important;
+}
+
+.MuiToolbar-root {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.MuiTypography-root.MuiTypography-h6.MuiTypography-noWrap {
+    display: flex;
+    align-items: center;
+}
+
+.Search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.Search div {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.Search .MuiInputBase-input MuiOutlinedInput-inputMuiFormControl-root {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.MuiOutlinedInput-input {
+    padding: 10.0px 10px !important;
+    outline: red;
+}
+
+.MuiInputLabel-outlined {
+    transform: translate(0.9rem, 0.8rem) scale(1) !important;
+    pointer-events: none;
+}
+
+.MuiContainer-root {
+    /* background-color: #b53f3f !important; */
+    /* background-color: rgba(12,162,205,0.5)  !important; */
+    /* background-color: #0eb9e91c !important; */
+    background-color:  #0CA2CC !important;
+
+    /* #0CA2CD3E */
+}
+
+.MuiContainer-root.MuiContainer-maxWidthLg {
+    /* background-color: #0CA2CD3E !important; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.MuiBox-root-5 {
+    /* background-color: #0CA2CD3E !important; */
+}
+
+.MuiBox-root-6 {
+    /* background-color: #0CA2CD3E !important; */
+}
+
+.MuiPaper-root {
+    /* color: rgba(0, 0, 0, 0.87); */
+    /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+    /* background-color: #0CA2CD3E !important; */
+
+}
+
+.MuiPaper-root.MuiCard-root.TrackItem_track__pIAvY.MuiPaper-elevation1.MuiPaper-rounded {
+    /* background-color: #0CA2CD3E !important; */
+    /* background-color:  #0CA1CB !important; */
+    background-color:  #0CA2CC !important;
+    color: #fff !important;
+
+    /* #0CA1CB */
+}
+
+.TrackItem .MuiIconButton-root {
+    color: #fff !important;
+}
+
+
+
+.MuiButton-containedPrimary {
+    color: #fff;
+    background-color: #b53f3f !important;
+    /* background-color: #3f51b5; */
+}
+
+.Song_Page{
+    /* background-color: #b53f3f !important; */
+    background-color:  #0CA2CC !important;
+    color: #ffffff;
+
+}
+
+.Song_Page .MuiButton-root {
+    color: #ffffff !important;
+}
+
+.Song_Page .custom-textfield-input {
+    color: red;
+}
+
+.custom-textfield-input {
+    color: red;
+}

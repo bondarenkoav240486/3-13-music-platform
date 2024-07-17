@@ -22,10 +22,18 @@ import { useRouter } from "next/router";
 import Search from "./Search";
 // import TrackItem from "./TrackItem";
 
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
+
+import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
+
+// import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+
+
+
 const menuItems = [
-    { text: 'Главная', href: '/' },
-    { text: 'Список треков', href: '/tracks' },
-    { text: 'Список альбомов', href: '/albums' },
+    { text: 'Головна', href: '/' },
+    { text: 'Список пісень', href: '/tracks' },
+    // { text: 'Список альбомів', href: '/albums' },
 ]
 
 export default function Navbar() {
@@ -56,7 +64,12 @@ export default function Navbar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Persistent drawer
+                        <MusicNoteIcon style={{ color: 'red' }}/>
+                        {/* <PlayCircleIcon style={{ color: 'red' }}/> */}
+                        {/* <MusicNoteIcon style={{ color: '#b53f3f' }}/> */}
+
+                        {/* <LibraryMusicIcon/> */}
+                        Music Platform
                     </Typography>
                     <Search />
                 </Toolbar>
