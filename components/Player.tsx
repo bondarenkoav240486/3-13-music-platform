@@ -137,7 +137,7 @@ const Player = () => {
             audioRef.current.ontimeupdate = () => {
                 setCurrentTime(Math.ceil(audioRef.current.currentTime));
             };
-            
+
             audioRef.current.onended = () => {
                 pauseTrack()
             }
@@ -167,17 +167,54 @@ const Player = () => {
     }
 
     return (
-        <div className={styles.player}>
-            <IconButton onClick={play}>
-                {pause ? <PlayArrow /> : <Pause />}
-            </IconButton>
-            <Grid container direction="column" style={{ width: 200, margin: '0 20px' }}>
-                <div>{active?.name}</div>
-                <div style={{ fontSize: 12, color: 'gray' }}>{active?.artist}</div>
-            </Grid>
-            <TrackProgress left={currentTime} right={duration} onChange={changeCurrentTime} />
-            <VolumeUp style={{ marginLeft: 'auto' }} />
-            <TrackProgress left={volume} right={100} onChange={changeVolume} />
+
+        <div
+            className={styles.player}
+        >
+            <div className='playbutton_name_volume'>
+                <IconButton onClick={play}>
+                    {pause ? <PlayArrow /> : <Pause />}
+                </IconButton>
+                {/* <Grid container direction="column" style={{ width: 200, margin: '0 20px' }}> */}
+                <Grid container direction="column" style={{ margin: '0 1.20rem' }}>
+                    <div>{active?.name}</div>
+                    {/* <div>active?.name</div> */}
+                    <div style={{ fontSize: 12, color: 'gray' }}>{active?.artist}</div>
+                    {/* <div style={{ fontSize: 12, color: 'gray' }}>active?.artist</div> */}
+
+
+
+                </Grid>
+
+                {/* <TrackProgress left={currentTime} right={duration} onChange={changeCurrentTime} /> */}
+                {/* <VolumeUp style={{ marginLeft: 'auto' }} /> */}
+
+
+
+                <div
+                    className={'volume_progress'}
+                >
+                <VolumeUp style={{ marginLeft: 'auto' }} />
+
+                    <TrackProgress left={volume} right={100} onChange={changeVolume} />
+                </div>
+
+
+
+
+
+            </div>
+
+
+            <div
+                className={'time_progress'}
+            >
+                <TrackProgress
+                    left={currentTime}
+                    right={duration}
+                    onChange={changeCurrentTime}
+                />
+            </div>
         </div>
     );
 };

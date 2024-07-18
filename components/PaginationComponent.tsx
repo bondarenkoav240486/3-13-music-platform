@@ -69,6 +69,9 @@ import React, { useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
+// import Pagination from '@material-ui/lab/Pagination';
+
+
 interface PaginationComponentProps {
     count: number; // Кількість сторінок
     onPageChange: (page: number) => void; // Функція зміни сторінки
@@ -89,10 +92,12 @@ const PaginationComponent: React.FC<PaginationComponentProps> = ({ count, onPage
                 count={count}
                 page={pageToPagination}
                 onChange={handleChange}
-                variant="outlined"
+                // variant="outlined"
                 color="primary"
-                shape="rounded"
+                // shape="rounded"
             />
+      {/* <Pagination count={count} color="secondary" /> */}
+
         </Stack>
     );
 };

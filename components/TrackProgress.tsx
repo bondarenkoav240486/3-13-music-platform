@@ -19,7 +19,7 @@ const TrackProgress: React.FC<TrackProgressProps> =
                     value={left}
                     onChange={onChange}
                 />
-                <div>{left} / {right}</div>
+                <div className='nuber_current__and_all'>{left} / {right}</div>
             </div>
         );
     };

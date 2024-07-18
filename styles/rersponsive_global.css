@@ -1,11 +1,54 @@
 @media (max-width: 550px) {
-    .Search  {
+    /* html{ */
+    /* font-size: 90%; */
+    /* } */
+
+    .Search {
         margin-left: 0.75rem;
         /* display: flex; */
         /* align-items: center; */
     }
 
-    header{
+    header {
         padding-bottom: 0.75rem !important;
     }
+
+    .MuiBox-root-6 {
+        padding: 0rem !important;
+    }
+
+    .MuiBox-root-5 {
+        padding: 0rem !important;
+    }
+
+    .TrackItem_track__pIAvY {
+        margin: 0.5rem !important;
+        padding: 0.5rem !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .time_progress input {
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 90%;
+    }
+
+    .Search {
+        margin-left: 0.75rem;
+        /* display: flex; */
+        /* align-items: center; */
+    }
+
+    header {
+        padding-bottom: 0.75rem !important;
+    }
+
+    
+    
 }

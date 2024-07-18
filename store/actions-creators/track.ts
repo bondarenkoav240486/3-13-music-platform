@@ -43,7 +43,7 @@ export const fetchTracks = (count: number = 10, offset: number = 0) => {
         } catch (e) {
             dispatch({
                 type: TrackActionTypes.FETCH_TRACKS_ERROR,
-                payload: 'Произошла ошибка при загрузке треков'
+                payload: 'Виникла помилка при завантаженні пісень'
             });
         }
     };

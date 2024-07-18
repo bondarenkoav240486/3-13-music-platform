@@ -5,7 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 
 const Index = () => {
     return (
-        <>
+        <div className='Main_Page'>
             <MainLayout>
                 <div className="center">
                     <h1>Ласкаво просимо!</h1>
@@ -23,7 +23,7 @@ const Index = () => {
                         justify-content: center;
                 `}
             </style>
-        </>
+        </div>
     );
 };
 

@@ -96,13 +96,18 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
 
 
 
-            <img width={70} height={70} src={process.env.NEXT_PUBLIC_API_URL + track.picture} />
-            <Grid container direction="column" style={{ width: 200, margin: '0 20px' }}>
+            <img
+                // width={'4.5 rem'}
+                // height={'4.5 rem'}
+                src={process.env.NEXT_PUBLIC_API_URL + track.picture}
+            />
+            {/* <Grid container direction="column" style={{ width: 200, margin: '0 20px' }}> */}
+            <Grid container direction="column" style={{  margin: '0 1.25rem' }}>
                 <div>{track.name}</div>
                 {/* <div style={{ fontSize: 12, color: 'gray' }}>{track.artist}</div> */}
-                <div style={{ fontSize: '0.75rem'}}>{track.artist}</div>
+                <div style={{ fontSize: '0.75rem' }}>{track.artist}</div>
             </Grid>
-            {active && <div>02:42 / 03:22</div>}
+            {/* {active && <div>02:42 / 03:22</div>} */}
             <IconButton
                 // onClick={e => e.stopPropagation()}
                 onClick={deleteTrack}

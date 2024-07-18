@@ -17,7 +17,7 @@ const Index = () => {
     const { tracks, error } = useTypedSelector(state => state.track)
 
 
-   
+
 
     const page = parseInt(router.query.page as string) || 1; // Отримання поточної сторінки з URL
     const limit = 2; // Кількість треків на сторінці
@@ -46,31 +46,34 @@ const Index = () => {
     }
 
     return (
-        <MainLayout title={"Список треков - музыкальная площадка"}>
-            <Grid container justifyContent='center'>
-                <Card style={{ width: 900 }}>
-                    <Box p={3}>
-                        <Grid container justifyContent='space-between'>
-                            <h1>Список пісень</h1>
-                            <Button onClick={() => router.push('/tracks/create')}>
-                                Завантажити
-                            </Button>
-                        </Grid>
-                    </Box>
-                    <TrackList tracks={tracks.data} />
-                </Card>
-                {/* <PaginationComponent
+        <div className={'Songs_List' }>
+            <MainLayout title={"Список пісень - музичний майданчик"} >
+                <Grid container justifyContent='center'>
+                    <Card style={{ width: 900 }} className='Track_List'>
+                        <Box p={3}>
+                            <Grid container justifyContent='space-between'>
+                                <h1>Список пісень</h1>
+                                <Button onClick={() => router.push('/tracks/create')}>
+                                    Завантажити
+                                </Button>
+                            </Grid>
+                        </Box>
+                        <TrackList tracks={tracks.data} />
+                    </Card>
+                    {/* <PaginationComponent
                     count={tracks.total/limit} // Передача загальної кількості сторінок
                     onPageChange={onPageChange} // Передача функції зміни сторінки
                 /> */}
+                   
+
+                </Grid>
                 <PaginationComponent
                         page={page}
                         count={Math.ceil(tracks.total / limit)} // Загальна кількість сторінок
                         onPageChange={onPageChange}
                     />
-
-            </Grid>
-        </MainLayout>
+            </MainLayout>
+        </div>
     );
 };
 
