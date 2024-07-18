@@ -19,8 +19,9 @@ const StepWrapper: React.FC<StepWrapperProps> = ({activeStep, children}) => {
                     </Step>
                 )}
             </Stepper>
-            <Grid container justifyContent="center" style={{margin: '70px 0 ', height: 270}}>
-                <Card style={{width: 600}}>
+            <Grid container justifyContent="center" style={{margin: '4.3rem 0 ', height: '17rem'}}>
+                {/* <Card style={{width: 600}}> */}
+                <Card style={{}}>
                     {children}
                 </Card>
             </Grid>

@@ -147,6 +147,51 @@ html {
     /* #0CA1CB */
 }
 
+/* DOWNLOAD */
+.MuiStepper-horizontal {
+    /* width: 100%; */
+    /* background-color: #b53f3f; */
+}
+
+/* DOWNLOAD */
+.MuiStepper-horizontal .MuiStepLabel-root {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* DOWNLOAD */
+.MuiStepper-horizontal .MuiTypography-displayBlock {
+    text-align: center;
+
+}
+/* DOWNLOAD */
+.MuiStepper-horizontal .MuiButton-root {
+    /* color: #fafafa; */
+}
+
+
+
+.MuiPaper-root.MuiStepper-root.MuiStepper-horizontal.MuiPaper-elevation0 {
+    /* background-color: #b53f3f; */
+    /* width: 100%; */
+
+
+}
+
+
+
+
+
+/* .MuiGrid-root.MuiGrid-container.MuiGrid-direction-xs-column {
+    width: 100%;
+
+} */
+
+
+
 .TrackItem .MuiIconButton-root {
     color: #fff !important;
 }
@@ -216,17 +261,17 @@ html {
 
 .time_progress input {
     width: 90%;
-    /* width: auto; */
 }
 
-.volume_progress{
+.volume_progress {
     display: flex;
     margin-left: auto;
 
 }
+
 .volume_progress .nuber_current__and_all {
-    /* width: 100%; */
-    width: 4rem;
+    width: auto;
+    /* width: 4rem; */
     /* font-size: 0.8rem; */
     /* background-color: #b53f3f; */
     /* display: flex; */

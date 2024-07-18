@@ -32,6 +32,10 @@
         width: 85%;
     }
 
+    time_progress .nuber_current__and_all {
+        width: 15%;
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 400px) {
@@ -48,7 +52,4 @@
     header {
         padding-bottom: 0.75rem !important;
     }
-
-    
-    
 }
