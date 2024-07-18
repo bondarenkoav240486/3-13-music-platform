@@ -216,6 +216,7 @@ html {
 
 .time_progress input {
     width: 90%;
+    /* width: auto; */
 }
 
 .volume_progress{
