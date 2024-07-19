@@ -6,6 +6,11 @@ html {
 
 }
 
+body{
+    background-color: #0CA2CC !important;
+
+}
+
 .MuiAppBar-root {
     background-color: #0B6D98 !important;
 }
@@ -72,7 +77,9 @@ html {
 
 /* .Songs_List */
 .MuiContainer-maxWidthLg {
-    max-width: 11280px !important;
+    /* max-width: 11280px !important; */
+    max-width: 1200px !important;
+    /* max-width: 150px !important; */
 }
 
 .Songs_List .MuiGrid-container {
@@ -120,6 +127,9 @@ html {
     /* background-color: #0CA2CD3E !important; */
     padding-top: 1rem;
     padding-bottom: 1rem;
+    /* display: flex; */
+    margin-left:  auto !important;
+    margin-right:  auto !important;
 }
 
 .MuiBox-root-5 {

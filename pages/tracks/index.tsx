@@ -46,10 +46,11 @@ const Index = () => {
     }
 
     return (
-        <div className={'Songs_List' }>
+        <div className={'Songs_List'}>
             <MainLayout title={"Список пісень - музичний майданчик"} >
                 <Grid container justifyContent='center'>
                     <Card style={{ width: 900 }} className='Track_List'>
+                        {/* <Card style={{ }} className='Track_List'> */}
                         <Box p={3}>
                             <Grid container justifyContent='space-between'>
                                 <h1>Список пісень</h1>
@@ -64,14 +65,14 @@ const Index = () => {
                     count={tracks.total/limit} // Передача загальної кількості сторінок
                     onPageChange={onPageChange} // Передача функції зміни сторінки
                 /> */}
-                   
+
 
                 </Grid>
                 <PaginationComponent
-                        page={page}
-                        count={Math.ceil(tracks.total / limit)} // Загальна кількість сторінок
-                        onPageChange={onPageChange}
-                    />
+                    page={page}
+                    count={Math.ceil(tracks.total / limit)} // Загальна кількість сторінок
+                    onPageChange={onPageChange}
+                />
             </MainLayout>
         </div>
     );
