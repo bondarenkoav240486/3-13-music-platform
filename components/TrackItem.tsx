@@ -1,6 +1,8 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
+
 import { ITrack } from "../types/track";
-import { Card, Grid, IconButton } from "@material-ui/core";
+// import { Card, Grid, IconButton } from "@material-ui/core";
 import styles from '../styles/TrackItem.module.scss'
 import { Delete, Pause, PlayArrow } from "@material-ui/icons";
 import { useRouter } from "next/router";
@@ -9,6 +11,9 @@ import { useActions } from "../hooks/useActions";
 import axios from "axios";
 
 import { useTypedSelector } from "../hooks/useTypedSelector";
+
+import { Card, Grid, IconButton, Dialog, DialogActions, DialogContent, DialogTitle, Button } from "@material-ui/core";
+
 
 
 
@@ -23,6 +28,9 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
     const { playTrack, pauseTrack, setActiveTrack } = useActions()
 
     const { active, pause } = useTypedSelector(state => state.player);
+
+    const [open, setOpen] = useState(false); // Додаємо стейт для модального вікна
+
 
 
 
@@ -65,16 +73,28 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
         }
     };
 
+    const handleDeleteClick = (e) => {
+        e.stopPropagation();
+        setOpen(true); // Відкриваємо модальне вікно
+    };
 
     const deleteTrack = async (e) => {
         e.stopPropagation()
         try {
-            const response = await axios.delete(process.env.NEXT_PUBLIC_API_URL + 'tracks/' + track._id)
-            window.location.reload();
+            // const response = await axios.delete(process.env.NEXT_PUBLIC_API_URL + 'tracks/' + track._id)
+            setOpen(false); // Закриваємо модальне вікно
+
+            // window.location.reload();
         } catch (e) {
             console.log(e)
         }
     }
+
+    const handleClose = (e) => {
+        e.stopPropagation();
+
+        setOpen(false); // Закриваємо модальне вікно без видалення
+    };
 
     return (
         <Card className={`${styles.track} TrackItem`} onClick={() => router.push('/tracks/' + track._id)}>
@@ -102,7 +122,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
                 src={process.env.NEXT_PUBLIC_API_URL + track.picture}
             />
             {/* <Grid container direction="column" style={{ width: 200, margin: '0 20px' }}> */}
-            <Grid container direction="column" style={{  margin: '0 1.25rem' }}>
+            <Grid container direction="column" style={{ margin: '0 1.25rem' }}>
                 <div>{track.name}</div>
                 {/* <div style={{ fontSize: 12, color: 'gray' }}>{track.artist}</div> */}
                 <div style={{ fontSize: '0.75rem' }}>{track.artist}</div>
@@ -110,12 +130,39 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
             {/* {active && <div>02:42 / 03:22</div>} */}
             <IconButton
                 // onClick={e => e.stopPropagation()}
-                onClick={deleteTrack}
+                // onClick={deleteTrack}
+                // handleDeleteClick
+                onClick={handleDeleteClick}
+
                 style={{ marginLeft: 'auto' }}
             >
                 <Delete />
             </IconButton>
+
+
+
+
+            {/* Модальне вікно підтвердження */}
+            <Dialog
+                open={open}
+                onClose={handleClose}
+            >
+                <DialogTitle>Підтвердження видалення</DialogTitle>
+                <DialogContent>
+                    <div>Ви дійсно хочете видалити цю пісню? ( У будь якому разі у Вас не вийде, бо це може робити тільки адміністратор :) )</div>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose} color="primary">
+                        Скасувати
+                    </Button>
+                    <Button onClick={deleteTrack} color="secondary">
+                        Видалити
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Card>
+
+
     );
 };
 

@@ -20,7 +20,7 @@ const Index = () => {
 
 
     const page = parseInt(router.query.page as string) || 1; // Отримання поточної сторінки з URL
-    const limit = 2; // Кількість треків на сторінці
+    const limit = 5; // Кількість треків на сторінці
     // const offset = (page - 1) * limit;
 
     // const stateTrack = useTypedSelector(state => state.track)
@@ -88,7 +88,7 @@ export default Index;
 // Додавання параметрів count і offset для fetchTracks
 export const getServerSideProps = wrapper.getServerSideProps(async ({ query, store }) => {
     const page = parseInt(query.page as string) || 1;
-    const limit = 2;
+    const limit = 5;
     const offset = (page - 1) * limit;
     const dispatch = store.dispatch as NextThunkDispatch;
     await dispatch(fetchTracks(limit, offset));

@@ -6,7 +6,7 @@ html {
 
 }
 
-body{
+body {
     background-color: #0CA2CC !important;
 
 }
@@ -45,6 +45,13 @@ body{
     display: flex;
     align-items: center;
     margin-right: 8px;
+}
+
+/* ResultOfSearch */
+.ResultOfSearch h1 {
+    color: #757575 ;
+    margin: 0 auto;
+
 }
 
 .MuiOutlinedInput-input {
@@ -128,8 +135,8 @@ body{
     padding-top: 1rem;
     padding-bottom: 1rem;
     /* display: flex; */
-    margin-left:  auto !important;
-    margin-right:  auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .MuiBox-root-5 {
@@ -177,6 +184,7 @@ body{
     text-align: center;
 
 }
+
 /* DOWNLOAD */
 .MuiStepper-horizontal .MuiButton-root {
     /* color: #fafafa; */

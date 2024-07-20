@@ -30,11 +30,26 @@ import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 
 
 
+// const menuItems = [
+//     { text: 'Головна', href: '/' },
+//     { text: 'Список пісень', href: '/tracks' },
+//     { text: 'Список альбомів', href: '/albums' },
+//     { text: 'Завантажити пісню', href: '/tracks/create' },
+// ]
+
+const icons = [
+    <MusicNoteIcon />,
+    <LibraryMusicIcon />,
+    <InboxIcon />,
+    <MailIcon />
+];
 const menuItems = [
-    { text: 'Головна', href: '/' },
-    { text: 'Список пісень', href: '/tracks' },
-    // { text: 'Список альбомів', href: '/albums' },
-]
+    { text: 'Головна', href: '/', icon: icons[0] },
+    { text: 'Список пісень', href: '/tracks', icon: icons[1] },
+    // { text: 'Список альбомів', href: '/albums', icon: icons[3] },
+    { text: 'Завантажити пісню', href: '/tracks/create', icon: icons[2] },
+];
+
 
 export default function Navbar() {
     const [open, setOpen] = React.useState(false);
@@ -64,7 +79,7 @@ export default function Navbar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        <MusicNoteIcon style={{ color: 'red' }}/>
+                        <MusicNoteIcon style={{ color: 'red' }} />
                         {/* <PlayCircleIcon style={{ color: 'red' }}/> */}
                         {/* <MusicNoteIcon style={{ color: '#b53f3f' }}/> */}
 
@@ -84,11 +99,21 @@ export default function Navbar() {
                         <ChevronLeftIcon />
                     </IconButton>
                 </div>
-                <List>
+                {/* <List>
                     {menuItems.map(({ text, href }, index) => (
                         <ListItem button key={href} onClick={() => router.push(href)}>
                             <ListItemIcon>
                                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItem>
+                    ))}
+                </List> */}
+                <List>
+                    {menuItems.map(({ text, href, icon }, index) => (
+                        <ListItem button key={href} onClick={() => router.push(href)}>
+                            <ListItemIcon>
+                                {icon}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>

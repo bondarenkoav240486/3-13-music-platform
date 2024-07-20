@@ -36,23 +36,25 @@ const searchResultTracks = () => {
     };
 
     return (
-        <MainLayout title={"Список треков - музыкальная площадка"}>
-            <Grid container justifyContent='center'>
-                <Card style={{ width: 900 }}>
-                    <Box p={3}>
-                        <Grid container justifyContent='space-between'>
-                            <h1>Результати пошуку</h1>
-                        </Grid>
-                    </Box>
-                    <TrackList tracks={tracks.data} /> {/* Передача масиву треків */}
-                    {/* <PaginationComponent
+        <div className="ResultOfSearch">
+            <MainLayout title={"Список пісень - музичний майданчик"}>
+                <Grid container justifyContent='center'>
+                    <Card style={{ width: 900 }}>
+                        <Box p={3}>
+                            <Grid container justifyContent='space-between'>
+                                <h1>Результати пошуку</h1>
+                            </Grid>
+                        </Box>
+                        <TrackList tracks={tracks.data} /> {/* Передача масиву треків */}
+                        {/* <PaginationComponent
                         page={page}
                         count={Math.ceil(tracks.total / limit)} // Загальна кількість сторінок
                         onPageChange={onPageChange}
                     /> */}
-                </Card>
-            </Grid>
-        </MainLayout>
+                    </Card>
+                </Grid>
+            </MainLayout>
+        </div>
     );
 };
 
