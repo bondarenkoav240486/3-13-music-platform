@@ -81,7 +81,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ track }) => {
     const deleteTrack = async (e) => {
         e.stopPropagation()
         try {
-            // const response = await axios.delete(process.env.NEXT_PUBLIC_API_URL + 'tracks/' + track._id)
+            const response = await axios.delete(process.env.NEXT_PUBLIC_API_URL + 'tracks/' + track._id)
             setOpen(false); // Закриваємо модальне вікно
 
             // window.location.reload();
