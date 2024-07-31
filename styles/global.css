@@ -106,17 +106,13 @@ body {
 }
 
 /* header .MuiButton-containedPrimary { */
-.AddSong header 
-.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary
-{
+.AddSong header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary {
     color: #fff;
     background-color: #b53f3f !important;
     /* background-color: #3f51b5; */
 }
 
- header 
-.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary
-{
+header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary {
     color: #fff;
     background-color: #b53f3f !important;
     /* background-color: #3f51b5; */
@@ -259,8 +255,8 @@ body {
 
 /* AddSongDOWNLOAD */
 
-.MuiGrid-root.MuiGrid-container.MuiGrid-justify-content-xs-center{
-    margin: 3.0rem 0; 
+.MuiGrid-root.MuiGrid-container.MuiGrid-justify-content-xs-center {
+    margin: 3.0rem 0;
 }
 
 .AddSong .MuiPaper-root {
@@ -270,7 +266,7 @@ body {
     /* background-color: #ffffff00 !important; */
 }
 
- .AddSong header.MuiPaper-root {
+.AddSong header.MuiPaper-root {
     /* color: rgb(255, 255, 255) !important; */
     background-color: #0ca2cc00 !important;
     /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
@@ -308,10 +304,10 @@ body {
 }
 
 /* .AddSong .MuiPaper-root { */
-    /* color: rgb(255, 255, 255) !important; */
-    /* background-color: #0ca2cc57 !important; */
-    /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
-    /* background-color: #ffffff00 !important; */
+/* color: rgb(255, 255, 255) !important; */
+/* background-color: #0ca2cc57 !important; */
+/* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+/* background-color: #ffffff00 !important; */
 /* } */
 
 
@@ -331,9 +327,9 @@ body {
 
 
 /* .MuiButton-containedPrimary { */
-    /* color: #fff; */
-    /* background-color: #b53f3f !important; */
-    /* background-color: #3f51b5; */
+/* color: #fff; */
+/* background-color: #b53f3f !important; */
+/* background-color: #3f51b5; */
 /* } */
 
 /* .TrackItem */
@@ -353,8 +349,7 @@ body {
 
 
 
-.Song_Page 
-{
+.Song_Page {
     /* background-color: #b53f3f !important; */
     /* background-color: #0CA2CC !important; */
     color: #ffffff;
@@ -372,16 +367,15 @@ body {
 .custom-textfield-input {
     color: red;
 }
+
 /* .Song_Page  */
- /* input.MuiInputBase-input.MuiInput-input{ */
-    /* color: #fff !important; */
- /* } */
+/* input.MuiInputBase-input.MuiInput-input{ */
+/* color: #fff !important; */
+/* } */
 /*  */
-.Song_Page 
- .MuiFormLabel-root 
- {
+.Song_Page .MuiFormLabel-root {
     color: rgb(255, 255, 255);
- }
+}
 
 /* .Player  */
 .Player_player__gTFJm .MuiGrid-container {
@@ -419,4 +413,37 @@ body {
     /* background-color: #b53f3f; */
     /* display: flex; */
     /* flex-direction: column; */
+}
+
+.Player_player__gTFJm {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #4d6c87c4 !important;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 1000;
+    color: white;
+}
+
+.Player_player__gTFJm .MuiSvgIcon-root {
+    fill: white;
+}
+
+.Player_player__gTFJm .MuiIconButton-label {
+    border-radius: 50%;
+    /* background-color: #b53f3f; */
+    /* background-color: #7c4b4b; */
+
+    padding: 0.3rem;
+    /* padding: 0.2rem; */
+}
+
+.Player_player__gTFJm .MuiIconButton-label .MuiSvgIcon-root {
+    font-size: 1.9rem;
+    font-size: 2.5rem;
+    /* color: #b53f3f; */
+    /* fill: #b53f3f; */
 }

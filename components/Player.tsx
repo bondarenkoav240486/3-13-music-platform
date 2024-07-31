@@ -96,6 +96,9 @@ import TrackProgress from "./TrackProgress";
 import { useTypedSelector } from "../hooks/useTypedSelector";
 import { useActions } from "../hooks/useActions";
 
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline';
+
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 
@@ -167,45 +170,40 @@ const Player = () => {
     }
 
     return (
-
         <div
             className={styles.player}
         >
             <div className='playbutton_name_volume'>
                 <IconButton onClick={play}>
-                    {pause ? <PlayArrow /> : <Pause />}
+                    {
+                        pause
+                            ?
+                            // <PlayArrow />
+                            <PlayCircleOutlineIcon />
+                            :
+                            // <Pause />
+                            <PauseCircleOutlineIcon />
+                    }
                 </IconButton>
                 {/* <Grid container direction="column" style={{ width: 200, margin: '0 20px' }}> */}
                 <Grid container direction="column" style={{ margin: '0 1.20rem' }}>
                     <div>{active?.name}</div>
                     {/* <div>active?.name</div> */}
-                    <div style={{ fontSize: 12, color: 'gray' }}>{active?.artist}</div>
+                    <div>
+                        {active?.artist}
+                    </div>
                     {/* <div style={{ fontSize: 12, color: 'gray' }}>active?.artist</div> */}
-
-
-
                 </Grid>
-
                 {/* <TrackProgress left={currentTime} right={duration} onChange={changeCurrentTime} /> */}
                 {/* <VolumeUp style={{ marginLeft: 'auto' }} /> */}
-
-
-
                 <div
                     className={'volume_progress'}
                 >
-                <VolumeUp style={{ marginLeft: 'auto' }} />
+                    <VolumeUp style={{ marginLeft: 'auto' }} />
 
                     <TrackProgress left={volume} right={100} onChange={changeVolume} />
                 </div>
-
-
-
-
-
             </div>
-
-
             <div
                 className={'time_progress'}
             >
