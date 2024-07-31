@@ -3,7 +3,7 @@
         /* max-width: 1000px !important; */
         /* margin: 0 auto; */
     }
-    
+
 }
 
 
@@ -51,6 +51,13 @@
     html {
         font-size: 90%;
     }
+
+    body {
+        /* background-position: center 6.0rem; */
+        /* Центрування фону */
+
+    }
+
 
     .Search {
         margin-left: 0.75rem;

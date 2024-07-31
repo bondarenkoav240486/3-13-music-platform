@@ -2,17 +2,51 @@ html {
     /* background-color: #0CA2CD !important; */
     /* background-color: #0CA2CD3E !important; */
     /* background-color: #0eb9e91c !important; */
-    background-color: #0CA2CC !important;
+
 
 }
 
 body {
     background-color: #0CA2CC !important;
 
+    background-image: url('../images/photo_2024-07-30_16-37-00.jpg');
+    background-size: cover;
+    /* Або інше значення в залежності від ваших потреб */
+    background-repeat: no-repeat;
+    /* Фон не повторюється */
+    background-attachment: fixed;
+    /* Фон залишається нерухомим при прокручуванні сторінки */
+    /* background-position: center 4rem; */
+    /* Центрування фону */
+    background-position: center 0rem;
+
+    /* height: 100vh;  */
+
 }
 
+/* background-color: #0ca2cc57 !important; */
+
+/*  */
+.MuiPaper-root {
+    color: rgb(255, 255, 255) !important;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #ffffff00 !important;
+}
+
+.MuiInputBase-input {
+    color: white !important;
+}
+
+
+
+/* Header AppBar ToolBar */
 .MuiAppBar-root {
-    background-color: #0B6D98 !important;
+    /* background-color: #0B6D98 !important; */
+}
+
+.MuiAppBar-colorPrimary {
+    color: #fff;
+    background-color: #ffffff00 !important;
 }
 
 .MuiToolbar-root {
@@ -20,7 +54,10 @@ body {
     /* justify-content: space-between; */
     align-items: center;
     flex-wrap: wrap;
+}
 
+.MuiToolbar-regular {
+    min-height: 4rem !important;
 }
 
 .MuiTypography-root.MuiTypography-h6.MuiTypography-noWrap {
@@ -28,6 +65,27 @@ body {
     align-items: center;
 }
 
+/* Menu Drawer */
+.MuiDrawer-root.MuiDrawer-docked .MuiPaper-root {
+    color: rgb(255, 255, 255) !important;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    /* background-color: #ffffff00 !important; */
+    background-color: #0b6d98b3 !important;
+}
+
+/* Menu Drawer icons*/
+/* .MuiDrawer-root.MuiDrawer-docked .MuiPaper-root  */
+/* .MuiListItemIcon-root { */
+/* color: rgb(255, 255, 255); */
+/* } */
+.MuiDrawer-root.MuiDrawer-docked .MuiPaper-root .MuiSvgIcon-root {
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/* Search */
 .Search {
     margin-left: auto;
     display: flex;
@@ -47,9 +105,26 @@ body {
     margin-right: 8px;
 }
 
+/* header .MuiButton-containedPrimary { */
+.AddSong header 
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary
+{
+    color: #fff;
+    background-color: #b53f3f !important;
+    /* background-color: #3f51b5; */
+}
+
+ header 
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary
+{
+    color: #fff;
+    background-color: #b53f3f !important;
+    /* background-color: #3f51b5; */
+}
+
 /* ResultOfSearch */
 .ResultOfSearch h1 {
-    color: #757575 ;
+    color: #757575;
     margin: 0 auto;
 
 }
@@ -64,6 +139,12 @@ body {
     pointer-events: none;
 } */
 
+
+
+
+
+
+
 .Main_Page {
     color: #fff !important;
 }
@@ -74,12 +155,12 @@ body {
 }
 
 .Songs_List h1 {
-    color: #757575 !important;
+    /* color: #757575 !important; */
     padding-left: 1rem;
 }
 
 .Songs_List .MuiButtonBase-root.MuiButton-root.MuiButton-text .MuiButton-label {
-    color: #757575 !important;
+    color: #ffffff !important;
 }
 
 /* .Songs_List */
@@ -126,7 +207,7 @@ body {
     /* background-color: #b53f3f !important; */
     /* background-color: rgba(12,162,205,0.5)  !important; */
     /* background-color: #0eb9e91c !important; */
-    background-color: #0CA2CC !important;
+    /* background-color: #0CA2CC !important; */
     /* #0CA2CD3E */
 }
 
@@ -147,21 +228,12 @@ body {
     padding: 1rem !important;
 }
 
-.MuiPaper-root {
-    /* color: rgba(0, 0, 0, 0.87); */
-    /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
-    /* background-color: #0CA2CD3E !important; */
 
-}
 
 .MuiPaper-root.MuiCard-root.TrackItem_track__pIAvY.MuiPaper-elevation1.MuiPaper-rounded {
-    /* background-color: #0CA2CD3E !important; */
-    /* background-color:  #0CA1CB !important; */
-    background-color: #0CA2CC !important;
+    background-color: #0ca2cc57 !important;
     color: #fff !important;
     min-width: 0 !important;
-
-    /* #0CA1CB */
 }
 
 /* DOWNLOAD */
@@ -185,28 +257,70 @@ body {
 
 }
 
-/* DOWNLOAD */
-.MuiStepper-horizontal .MuiButton-root {
-    /* color: #fafafa; */
+/* AddSongDOWNLOAD */
+
+.MuiGrid-root.MuiGrid-container.MuiGrid-justify-content-xs-center{
+    margin: 3.0rem 0; 
+}
+
+.AddSong .MuiPaper-root {
+    /* color: rgb(255, 255, 255) !important; */
+    background-color: #0ca2cc57 !important;
+    /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+    /* background-color: #ffffff00 !important; */
+}
+
+ .AddSong header.MuiPaper-root {
+    /* color: rgb(255, 255, 255) !important; */
+    background-color: #0ca2cc00 !important;
+    /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+    /* background-color: #ffffff00 !important; */
 }
 
 
 
-.MuiPaper-root.MuiStepper-root.MuiStepper-horizontal.MuiPaper-elevation0 {
-    /* background-color: #b53f3f; */
-    /* width: 100%; */
-
-
+.AddSong .MuiStepLabel-label.MuiStepLabel-active {
+    color: rgb(255 255 255 / 87%) !important;
+    font-weight: 500;
 }
 
+.AddSong .MuiFormLabel-root {
+    color: rgb(255, 255, 255);
+}
+
+.AddSong .MuiButton-root {
+    color: rgb(255, 255, 255) !important;
+    background-color: #0ca2cc57 !important;
+}
+
+.AddSong .MuiInput-underline:before {
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+}
+
+.AddSong .MuiButton-root.Mui-disabled {
+    color: rgb(0, 0, 0) !important;
+}
+
+.AddSong .MuiSnackbar-anchorOriginBottomCenter {
+    bottom: 8px;
+    position: absolute;
+    top: 6rem;
+}
+
+/* .AddSong .MuiPaper-root { */
+    /* color: rgb(255, 255, 255) !important; */
+    /* background-color: #0ca2cc57 !important; */
+    /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+    /* background-color: #ffffff00 !important; */
+/* } */
 
 
 
 
-/* .MuiGrid-root.MuiGrid-container.MuiGrid-direction-xs-column {
-    width: 100%;
 
-} */
+
+
+
 
 
 
@@ -216,11 +330,11 @@ body {
 
 
 
-.MuiButton-containedPrimary {
-    color: #fff;
-    background-color: #b53f3f !important;
+/* .MuiButton-containedPrimary { */
+    /* color: #fff; */
+    /* background-color: #b53f3f !important; */
     /* background-color: #3f51b5; */
-}
+/* } */
 
 /* .TrackItem */
 .MuiBox-root.MuiBox-root-8 {
@@ -239,9 +353,10 @@ body {
 
 
 
-.Song_Page {
+.Song_Page 
+{
     /* background-color: #b53f3f !important; */
-    background-color: #0CA2CC !important;
+    /* background-color: #0CA2CC !important; */
     color: #ffffff;
 
 }
@@ -257,6 +372,16 @@ body {
 .custom-textfield-input {
     color: red;
 }
+/* .Song_Page  */
+ /* input.MuiInputBase-input.MuiInput-input{ */
+    /* color: #fff !important; */
+ /* } */
+/*  */
+.Song_Page 
+ .MuiFormLabel-root 
+ {
+    color: rgb(255, 255, 255);
+ }
 
 /* .Player  */
 .Player_player__gTFJm .MuiGrid-container {
