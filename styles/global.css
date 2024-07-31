@@ -37,6 +37,11 @@ body {
     color: white !important;
 }
 
+.MuiContainer-root.MuiContainer-maxWidthLg
+{
+    margin: 5rem 0 7.5rem 0 !important;
+}
+
 
 
 /* Header AppBar ToolBar */
@@ -446,4 +451,8 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
     font-size: 2.5rem;
     /* color: #b53f3f; */
     /* fill: #b53f3f; */
+}
+
+.Player_player__gTFJm .artist_Name {
+    font-size: 0.66rem;
 }

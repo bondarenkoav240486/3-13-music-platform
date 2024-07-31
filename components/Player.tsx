@@ -189,7 +189,7 @@ const Player = () => {
                 <Grid container direction="column" style={{ margin: '0 1.20rem' }}>
                     <div>{active?.name}</div>
                     {/* <div>active?.name</div> */}
-                    <div>
+                    <div className='artist_Name'>
                         {active?.artist}
                     </div>
                     {/* <div style={{ fontSize: 12, color: 'gray' }}>active?.artist</div> */}
