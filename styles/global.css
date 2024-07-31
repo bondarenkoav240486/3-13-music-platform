@@ -433,11 +433,11 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
 }
 
 .Player_player__gTFJm .MuiIconButton-label {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     /* background-color: #b53f3f; */
     /* background-color: #7c4b4b; */
 
-    padding: 0.3rem;
+    /* padding: 0.3rem; */
     /* padding: 0.2rem; */
 }
 
