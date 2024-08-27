@@ -40,7 +40,7 @@ body {
 
 .MuiContainer-root.MuiContainer-maxWidthLg
 {
-    margin: 6rem 0 9.0rem 0 !important;
+    /* margin: 6rem 0 9.0rem 0 !important; */
 }
 
 
@@ -151,6 +151,23 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
     color: #fff !important;
 }
 
+
+.center.jsx-7e248317ee04c157 {
+    background: #0b6d9885;
+    width: 50%;
+    /* margin: auto auto; */
+}
+
+.center.jsx-7e248317ee04c157 {
+    background: #0b6d988a;
+    width: 30rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.2rem solid #085c81;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
+
+
 /* #757575 */
 .Songs_List {
     color: #fff !important;
@@ -205,21 +222,17 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
     justify-content: center;
 }
 
-.MuiContainer-root {
-    /* background-color: #b53f3f !important; */
-    /* background-color: rgba(12,162,205,0.5)  !important; */
-    /* background-color: #0eb9e91c !important; */
-    /* background-color: #0CA2CC !important; */
-    /* #0CA2CD3E */
-}
 
 .MuiContainer-root.MuiContainer-maxWidthLg {
     /* background-color: #0CA2CD3E !important; */
     padding-top: 1rem;
     padding-bottom: 1rem;
-    /* display: flex; */
+    display: flex;
     margin-left: auto !important;
     margin-right: auto !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .MuiBox-root-5 {
@@ -267,9 +280,10 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
 
 .AddSong .MuiPaper-root {
     /* color: rgb(255, 255, 255) !important; */
-    background-color: #0ca2cc57 !important;
+    background-color: #0b6d9896 !important;
     /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
     /* background-color: #ffffff00 !important; */
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
 }
 
 .AddSong header.MuiPaper-root {
@@ -292,7 +306,9 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
 
 .AddSong .MuiButton-root {
     color: rgb(255, 255, 255) !important;
-    background-color: #0ca2cc57 !important;
+    background-color: #0b6d98b0 !important;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+    border-bottom: 0.2rem solid #0b6d98d9;
 }
 
 .AddSong .MuiInput-underline:before {
@@ -309,12 +325,12 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
     top: 6rem;
 }
 
-/* .AddSong .MuiPaper-root { */
-/* color: rgb(255, 255, 255) !important; */
-/* background-color: #0ca2cc57 !important; */
-/* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
-/* background-color: #ffffff00 !important; */
-/* } */
+.AddSong
+.MuiGrid-justify-content-xs-space-between {
+    /* padding: 1rem; */
+    justify-content: space-between;
+    background: #0b6d9870;
+}
 
 
 
