@@ -7,22 +7,15 @@ html {
 }
 
 body {
-    background-color: #0CA2CC !important;
-
+    background-color: #114f7c !important;
     /* background-image: url('../images/photo_2024-07-30_16-37-00.jpg'); */
-    background-image: url('../images/photo_2024-08-03_14-41-11.jpg');
+    background-image: url(/_next/static/media/photo_2024-08-03_14-41-11.c273d96d.jpg);
     background-size: cover;
-    /* Або інше значення в залежності від ваших потреб */
     background-repeat: no-repeat;
-    /* Фон не повторюється */
     background-attachment: fixed;
-    /* Фон залишається нерухомим при прокручуванні сторінки */
     /* background-position: center 4rem; */
-    /* Центрування фону */
     background-position: center 0rem;
-
-    /* height: 100vh;  */
-
+    /* height: 100vh; */
 }
 
 /* background-color: #0ca2cc57 !important; */
