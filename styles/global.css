@@ -9,7 +9,8 @@ html {
 body {
     background-color: #114f7c !important;
     /* background-image: url('../images/photo_2024-07-30_16-37-00.jpg'); */
-    background-image: url(/_next/static/media/photo_2024-08-03_14-41-11.c273d96d.jpg);
+    /* background-image: url(/_next/static/media/photo_2024-08-03_14-41-11.c273d96d.jpg); */
+    background-image: url(../images/photo_2024-08-03_14-41-11.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -191,8 +192,16 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
 }
 
 /* pagination */
-.Songs_List .MuiStack-root.css-1sazv7p-MuiStack-root {
+.Songs_List 
+.MuiStack-root.css-1sazv7p-MuiStack-root {
     margin-top: 1rem;
+}
+
+.Songs_List 
+nav 
+{
+    display: flex;
+    justify-content: center;
 }
 
 /* pagination */
