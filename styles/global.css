@@ -152,18 +152,18 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
 }
 
 
-.center.jsx-7e248317ee04c157 {
-    background: #0b6d9885;
-    width: 50%;
-    /* margin: auto auto; */
-}
 
-.center.jsx-7e248317ee04c157 {
-    background: #0b6d988a;
-    width: 30rem;
+.Main_Page
+.info {
+    /* background: #0b6d988a; */
+    background: #0b6d9885;
+    max-width: 30rem;
+    width: 100%;
     border-radius: 0.5rem;
     border-bottom: 0.2rem solid #085c81;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -232,7 +232,7 @@ header .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containe
     margin-right: auto !important;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .MuiBox-root-5 {

@@ -7,7 +7,7 @@ const Index = () => {
     return (
         <div className='Main_Page'>
             <MainLayout>
-                <div className="center">
+                <div className="center info">
                     <h1>Ласкаво просимо!</h1>
                     <h3>Тут зібрані кращі пісні!</h3>
                     <p>
